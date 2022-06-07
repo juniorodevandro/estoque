@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EstoqueModelStoreContainer" CdmEntityContainer="EntidadeEstoque">
+    <EntitySetMapping Name="TB_ESTOQUE">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_ESTOQUE">
+        <MappingFragment StoreEntitySet="TB_ESTOQUE">
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="DATA" ColumnName="DATA" />
+          <ScalarProperty Name="ORDEM" ColumnName="ORDEM" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="SALDOQUANTIDADE" ColumnName="SALDOQUANTIDADE" />
+          <ScalarProperty Name="SALDOPESOLIQUIDO" ColumnName="SALDOPESOLIQUIDO" />
+          <ScalarProperty Name="SALDOPESOBRUTO" ColumnName="SALDOPESOBRUTO" />
+          <ScalarProperty Name="VALORUNITARIO" ColumnName="VALORUNITARIO" />
+          <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ITEM">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_ITEM">
+        <MappingFragment StoreEntitySet="TB_ITEM">
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="CODIGOREFERENCIA" ColumnName="CODIGOREFERENCIA" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="CLASSIFICACAO" ColumnName="CLASSIFICACAO" />
+          <ScalarProperty Name="PESOLIQUIDO" ColumnName="PESOLIQUIDO" />
+          <ScalarProperty Name="PESOBRUTO" ColumnName="PESOBRUTO" />
+          <ScalarProperty Name="UNIDADEMEDIDA" ColumnName="UNIDADEMEDIDA" />
+          <ScalarProperty Name="OBSERVACAO" ColumnName="OBSERVACAO" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_MOVIMENTACAO">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_MOVIMENTACAO">
+        <MappingFragment StoreEntitySet="TB_MOVIMENTACAO">
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="DATA" ColumnName="DATA" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="TIPOMOVIMENTACAO" ColumnName="TIPOMOVIMENTACAO" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="ORDEM" ColumnName="ORDEM" />
+          <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+          <ScalarProperty Name="VALORUNITARIO" ColumnName="VALORUNITARIO" />
+          <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+          <ScalarProperty Name="PESOLIQUIDO" ColumnName="PESOLIQUIDO" />
+          <ScalarProperty Name="PESOBRUTO" ColumnName="PESOBRUTO" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ORDEM">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_ORDEM">
+        <MappingFragment StoreEntitySet="TB_ORDEM">
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="DATA" ColumnName="DATA" />
+          <ScalarProperty Name="PESOLIQUIDO" ColumnName="PESOLIQUIDO" />
+          <ScalarProperty Name="PESOBRUTO" ColumnName="PESOBRUTO" />
+          <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+          <ScalarProperty Name="OBSERVACAO" ColumnName="OBSERVACAO" />
+          <ScalarProperty Name="NUMEROPEDIDO" ColumnName="NUMEROPEDIDO" />
+          <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+          <ScalarProperty Name="TIPOMOVIMENTACAO" ColumnName="TIPOMOVIMENTACAO" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="VALORUNITARIO" ColumnName="VALORUNITARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PESSOA">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_PESSOA">
+        <MappingFragment StoreEntitySet="TB_PESSOA">
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="OBSERVACAO" ColumnName="OBSERVACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USUARIO">
+      <EntityTypeMapping TypeName="EstoqueModel.TB_USUARIO">
+        <MappingFragment StoreEntitySet="TB_USUARIO">
+          <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="SENHA" ColumnName="SENHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

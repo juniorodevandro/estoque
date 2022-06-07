@@ -1,0 +1,47 @@
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.csproj.AssemblyReference.cache
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.csproj.SuggestedBindingRedirects.cache
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.Properties.Resources.resources
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.View.FormPessoa.resources
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.csproj.GenerateResource.cache
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.csproj.CoreCompileInputs.cache
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\Estoque.exe.config
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\Estoque.exe
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\Estoque.pdb
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\EntityFramework.dll
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\EntityFramework.xml
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.csproj.CopyComplete
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.exe
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.pdb
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.View.FormMovimentacao.resources
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.View.FormItem.resources
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\bin\Debug\pt-BR\Estoque.resources.dll
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\Estoque.View.FormItem.pt-BR.resources
+C:\Users\Junior\OneDrive - unidavi.edu.br\Projetos\Estoque\Estoque\obj\Debug\pt-BR\Estoque.resources.dll
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\Estoque.exe.config
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\Estoque.exe
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\Estoque.pdb
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\pt-BR\Estoque.resources.dll
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\EntityFramework.dll
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\EntityFramework.xml
+C:\Users\Junior\source\repos\Estoque\Estoque\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.csproj.AssemblyReference.cache
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.csproj.SuggestedBindingRedirects.cache
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.Controller.FormController.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.Properties.Resources.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormLogin.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormMovimentacao.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormOrdem.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormPessoa.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormItem.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.FormPrincipal.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormUsuario.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.View.FormItem.pt-BR.resources
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.csproj.GenerateResource.cache
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.csproj.CoreCompileInputs.cache
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\pt-BR\Estoque.resources.dll
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.csproj.CopyComplete
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.exe
+C:\Users\Junior\source\repos\Estoque\Estoque\obj\Debug\Estoque.pdb

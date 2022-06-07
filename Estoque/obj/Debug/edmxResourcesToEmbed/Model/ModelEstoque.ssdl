@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EstoqueModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TB_ESTOQUE">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATA" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="ORDEM" Type="int" Nullable="false" />
+    <Property Name="CLIENTE" Type="int" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="SALDOQUANTIDADE" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="SALDOPESOLIQUIDO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="SALDOPESOBRUTO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="VALORUNITARIO" Type="numeric" Precision="15" Scale="10" Nullable="false" />
+    <Property Name="VALORTOTAL" Type="numeric" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="ITEM" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ITEM">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CODIGOREFERENCIA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CLIENTE" Type="int" Nullable="false" />
+    <Property Name="CLASSIFICAO" Type="int" />
+    <Property Name="PESOLIQUIDO" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="PESOBRUTO" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="UNIDADEMEDIDA" Type="int" Nullable="false" />
+    <Property Name="OBSERVACAO" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TB_MOVIMENTACAO">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATA" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CLIENTE" Type="int" Nullable="false" />
+    <Property Name="TIPOMOVIMENTACAO" Type="int" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="ORDEM" Type="int" Nullable="false" />
+    <Property Name="QUANTIDADE" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="VALORUNITARIO" Type="numeric" Precision="15" Scale="10" Nullable="false" />
+    <Property Name="VALORTOTAL" Type="numeric" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="PESOLIQUIDO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="PESOBRUTO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="ITEM" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ORDEM">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CLIENTE" Type="int" Nullable="false" />
+    <Property Name="DATA" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="PESOLIQUIDO" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="PESOBRUTO" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VALORTOTAL" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="OBSERVACAO" Type="varchar" MaxLength="1000" />
+    <Property Name="NUMEROPEDIDO" Type="varchar" MaxLength="50" />
+    <Property Name="QUANTIDADE" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="TIPOMOVIMENTACAO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ORDEMITEM">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="ITEM" Type="int" Nullable="false" />
+    <Property Name="ORDEM" Type="int" Nullable="false" />
+    <Property Name="QUANTIDADE" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="PESOBRUTO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="PESOLIQUIDO" Type="numeric" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="VALORUNITARIO" Type="numeric" Precision="15" Scale="10" Nullable="false" />
+    <Property Name="VALORTOTAL" Type="numeric" Precision="15" Scale="10" Nullable="false" />
+    <Property Name="LOTE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_PESSOA">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="NOME" Type="varchar" MaxLength="200" />
+    <Property Name="CODIGO" Type="int" />
+    <Property Name="CPFCNPJ" Type="varchar" MaxLength="50" />
+    <Property Name="ENDERECO" Type="int" Nullable="false" />
+    <Property Name="EHCLIENTE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="EHFORNECEDOR" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="TELEFONE" Type="varchar" MaxLength="20" />
+    <Property Name="HANDLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USUARIO">
+    <Key>
+      <PropertyRef Name="HANDLE" />
+    </Key>
+    <Property Name="HANDLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SENHA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CONFIRMARSENHA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ESTOQUE_CLIENTE">
+    <End Role="TB_PESSOA" Type="Self.TB_PESSOA" Multiplicity="1" />
+    <End Role="TB_ESTOQUE" Type="Self.TB_ESTOQUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PESSOA">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ESTOQUE">
+        <PropertyRef Name="CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTOQUE_ITEEM">
+    <End Role="TB_ITEM" Type="Self.TB_ITEM" Multiplicity="1" />
+    <End Role="TB_ESTOQUE" Type="Self.TB_ESTOQUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ITEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ESTOQUE">
+        <PropertyRef Name="ITEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTOQUE_ITEM">
+    <End Role="TB_ORDEM" Type="Self.TB_ORDEM" Multiplicity="1" />
+    <End Role="TB_ESTOQUE" Type="Self.TB_ESTOQUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ORDEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ESTOQUE">
+        <PropertyRef Name="ORDEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTOQUE_ORDEM">
+    <End Role="TB_ORDEM" Type="Self.TB_ORDEM" Multiplicity="1" />
+    <End Role="TB_ESTOQUE" Type="Self.TB_ESTOQUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ORDEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ESTOQUE">
+        <PropertyRef Name="ORDEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_CLIENTE">
+    <End Role="TB_PESSOA" Type="Self.TB_PESSOA" Multiplicity="1" />
+    <End Role="TB_ITEM" Type="Self.TB_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PESSOA">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ITEM">
+        <PropertyRef Name="CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVIMENTACAO_CLIENTE">
+    <End Role="TB_PESSOA" Type="Self.TB_PESSOA" Multiplicity="1" />
+    <End Role="TB_MOVIMENTACAO" Type="Self.TB_MOVIMENTACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PESSOA">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_MOVIMENTACAO">
+        <PropertyRef Name="CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVIMENTACAO_ITEM">
+    <End Role="TB_ITEM" Type="Self.TB_ITEM" Multiplicity="1" />
+    <End Role="TB_MOVIMENTACAO" Type="Self.TB_MOVIMENTACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ITEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_MOVIMENTACAO">
+        <PropertyRef Name="ITEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVIMENTACAO_ORDEM">
+    <End Role="TB_ORDEM" Type="Self.TB_ORDEM" Multiplicity="1" />
+    <End Role="TB_MOVIMENTACAO" Type="Self.TB_MOVIMENTACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ORDEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_MOVIMENTACAO">
+        <PropertyRef Name="ORDEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDEM_CLIENTE">
+    <End Role="TB_PESSOA" Type="Self.TB_PESSOA" Multiplicity="1" />
+    <End Role="TB_ORDEM" Type="Self.TB_ORDEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PESSOA">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ORDEM">
+        <PropertyRef Name="CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDEMITEM_ITEM">
+    <End Role="TB_ITEM" Type="Self.TB_ITEM" Multiplicity="1" />
+    <End Role="TB_ORDEMITEM" Type="Self.TB_ORDEMITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ITEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ORDEMITEM">
+        <PropertyRef Name="ITEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDEMITEM_ORDEM">
+    <End Role="TB_ORDEM" Type="Self.TB_ORDEM" Multiplicity="1" />
+    <End Role="TB_ORDEMITEM" Type="Self.TB_ORDEMITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ORDEM">
+        <PropertyRef Name="HANDLE" />
+      </Principal>
+      <Dependent Role="TB_ORDEMITEM">
+        <PropertyRef Name="ORDEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EstoqueModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ESTOQUE" EntityType="Self.TB_ESTOQUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ITEM" EntityType="Self.TB_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_MOVIMENTACAO" EntityType="Self.TB_MOVIMENTACAO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ORDEM" EntityType="Self.TB_ORDEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ORDEMITEM" EntityType="Self.TB_ORDEMITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PESSOA" EntityType="Self.TB_PESSOA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USUARIO" EntityType="Self.TB_USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ESTOQUE_CLIENTE" Association="Self.FK_ESTOQUE_CLIENTE">
+      <End Role="TB_PESSOA" EntitySet="TB_PESSOA" />
+      <End Role="TB_ESTOQUE" EntitySet="TB_ESTOQUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTOQUE_ITEEM" Association="Self.FK_ESTOQUE_ITEEM">
+      <End Role="TB_ITEM" EntitySet="TB_ITEM" />
+      <End Role="TB_ESTOQUE" EntitySet="TB_ESTOQUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTOQUE_ITEM" Association="Self.FK_ESTOQUE_ITEM">
+      <End Role="TB_ORDEM" EntitySet="TB_ORDEM" />
+      <End Role="TB_ESTOQUE" EntitySet="TB_ESTOQUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTOQUE_ORDEM" Association="Self.FK_ESTOQUE_ORDEM">
+      <End Role="TB_ORDEM" EntitySet="TB_ORDEM" />
+      <End Role="TB_ESTOQUE" EntitySet="TB_ESTOQUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_CLIENTE" Association="Self.FK_ITEM_CLIENTE">
+      <End Role="TB_PESSOA" EntitySet="TB_PESSOA" />
+      <End Role="TB_ITEM" EntitySet="TB_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIMENTACAO_CLIENTE" Association="Self.FK_MOVIMENTACAO_CLIENTE">
+      <End Role="TB_PESSOA" EntitySet="TB_PESSOA" />
+      <End Role="TB_MOVIMENTACAO" EntitySet="TB_MOVIMENTACAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIMENTACAO_ITEM" Association="Self.FK_MOVIMENTACAO_ITEM">
+      <End Role="TB_ITEM" EntitySet="TB_ITEM" />
+      <End Role="TB_MOVIMENTACAO" EntitySet="TB_MOVIMENTACAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIMENTACAO_ORDEM" Association="Self.FK_MOVIMENTACAO_ORDEM">
+      <End Role="TB_ORDEM" EntitySet="TB_ORDEM" />
+      <End Role="TB_MOVIMENTACAO" EntitySet="TB_MOVIMENTACAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDEM_CLIENTE" Association="Self.FK_ORDEM_CLIENTE">
+      <End Role="TB_PESSOA" EntitySet="TB_PESSOA" />
+      <End Role="TB_ORDEM" EntitySet="TB_ORDEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDEMITEM_ITEM" Association="Self.FK_ORDEMITEM_ITEM">
+      <End Role="TB_ITEM" EntitySet="TB_ITEM" />
+      <End Role="TB_ORDEMITEM" EntitySet="TB_ORDEMITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDEMITEM_ORDEM" Association="Self.FK_ORDEMITEM_ORDEM">
+      <End Role="TB_ORDEM" EntitySet="TB_ORDEM" />
+      <End Role="TB_ORDEMITEM" EntitySet="TB_ORDEMITEM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
